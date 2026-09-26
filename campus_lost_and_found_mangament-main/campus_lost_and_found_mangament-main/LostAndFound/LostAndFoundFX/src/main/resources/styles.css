@@ -1,0 +1,219 @@
+/* =========================
+   GLOBAL VARIABLES & RESET
+========================= */
+.root {
+    -fx-font-family: "Segoe UI", "Verdana", "sans-serif";
+    -fx-background-color: #e0e5ec;
+    -fx-font-size: 14px;
+}
+
+/* =========================
+   TITLES & HEADINGS
+========================= */
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.8), 0, 1, 0, 0);
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+}
+
+/* =========================
+   BUTTONS (Liquid Metal v2)
+========================= */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #444444;
+    -fx-cursor: hand;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+}
+
+/* The 'Liquid Metal' look: Strong silver gradient with shine */
+.primary-btn {
+    -fx-background-color:
+        linear-gradient(to bottom, #ffffff 0%, #e0e0e0 49%, #c0c0c0 50%, #f0f0f0 100%);
+
+    -fx-background-radius: 30;
+    -fx-text-fill: #333333;
+    /* Dark text for contrast on silver */
+    -fx-font-size: 14px;
+    -fx-padding: 12 28;
+
+    /* Strong 3D button effect */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 4, 4);
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 30;
+    -fx-border-width: 1px;
+}
+
+.primary-btn:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, #ffffff 0%, #eeeeee 49%, #dcdcdc 50%, #ffffff 100%);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 15, 0, 5, 5);
+}
+
+.primary-btn:pressed {
+    -fx-background-color:
+        linear-gradient(to bottom, #cccccc 0%, #eeeeee 100%);
+    -fx-effect: inner-shadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 2, 2);
+    -fx-translate-y: 2;
+}
+
+.secondary-btn {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    -fx-text-fill: #555555;
+    -fx-background-radius: 30;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 2, 2);
+}
+
+.secondary-btn:hover {
+    -fx-background-color: white;
+    -fx-border-color: #999999;
+}
+
+/* =========================
+   SIDEBAR (Dark Glass)
+========================= */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);
+    -fx-background-radius: 0 20 20 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+}
+
+.sidebar-title {
+    -fx-text-fill: #aaaaaa;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-padding: 0 0 20 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 2, 0, 1, 1);
+}
+
+.sidebar .button {
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-padding: 12 20;
+    -fx-background-radius: 15;
+}
+
+.sidebar .button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 5, 0, 0, 0);
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+.text-field,
+.password-field,
+.text-area {
+    -fx-background-color: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    -fx-background-radius: 20;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-padding: 10 15;
+    -fx-text-fill: #333333;
+    -fx-effect: inner-shadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 2, 2);
+}
+
+.text-field:focused,
+.password-field:focused,
+.text-area:focused {
+    -fx-border-color: #888888;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 0);
+}
+
+/* =========================
+   CARDS (Neumorphism / Liquid)
+========================= */
+.item-card {
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #f0f2f5);
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-padding: 24;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 15, 0, 5, 5);
+}
+
+.item-card:hover {
+    -fx-translate-y: -2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 20, 0, 8, 8);
+}
+
+/* =========================
+   STATUS PILLS
+========================= */
+.status-pill {
+    -fx-padding: 6 14;
+    -fx-background-radius: 20;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 1, 1);
+}
+
+.status-lost {
+    -fx-background-color: linear-gradient(to bottom, #ffcccc, #ff9999);
+    -fx-text-fill: #800000;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-radius: 20;
+}
+
+.status-found {
+    -fx-background-color: linear-gradient(to bottom, #ccccff, #9999ff);
+    -fx-text-fill: #000080;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-radius: 20;
+}
+
+.status-returned {
+    -fx-background-color: linear-gradient(to bottom, #ccffcc, #99ff99);
+    -fx-text-fill: #006400;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-radius: 20;
+}
+
+/* =========================
+   SCROLLBARS
+========================= */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #bbbbbb;
+    -fx-background-radius: 10;
+}
+
+/* =========================
+   TABLE VIEW
+========================= */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 15;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 15 15 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #dddddd transparent;
+}

@@ -1,0 +1,13 @@
+# ========================================================
+# Copy this file to db.properties if needed.
+# Storage Configuration
+# ========================================================
+# Fixed split for this app:
+#   - Items (lost/found reports) -> SQLite
+#   - Users (login accounts)     -> JSON
+
+# --- Items: SQLite ---
+db.url=jdbc:sqlite:lost_found_db.db
+
+# --- Users: JSON ---
+users.file=users.json
